@@ -1,0 +1,24 @@
+@model Dish
+
+<div class="">
+    <h1 class="">Welcome to our digital cookbook!</h1>
+    <form asp-action="Create" asp-controller="Dish">
+        <label asp-for="name"></label>
+        <input asp-for="name">
+        <label asp-for="chef"></label>
+        <input asp-for="chef">
+        <label asp-for="calories"></label>
+        <input asp-for="calories">
+        <select asp-for="tastiness">
+            <option default selected>how many stars out of five?</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <label asp-for="description"></label>
+        <input asp-for="description">
+        <button type="submit">Add Dish</button>
+    </form>
+</div>

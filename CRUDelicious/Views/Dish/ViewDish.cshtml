@@ -1,0 +1,16 @@
+@model Dish
+
+<div class="card shadow rounded mx-auto w-75 mb-3">
+        <h4 class="card-title text-center bg-dark text-light py-2 rounded-top">
+            @Model.name
+        </h4>
+        <div class="card-body">
+            <p class="card-text">@Model.description</p>
+        </div>
+        <small class="text-muted">@Model.chef</small>
+        <small class="text-muted">@Model.calories</small>
+        <form asp-controller="Dish" asp-action="Delete" asp-route-deletedDishId="@Model.id" method="POST">
+            <button>Delete</button>
+        </form>
+        <a href="/dishes/@Model.id/edit">Edit Recipe</a>
+    </div>

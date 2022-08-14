@@ -1,0 +1,25 @@
+@model Dish
+
+<div class="">
+    <h1 class="">Welcome to our digital cookbook!</h1>
+    <form asp-action="UpdateDish" asp-controller="Dish" asp-route-updatedDishId="@Model.id">
+        @* <input asp-for="id" type="hidden"> *@
+        <label asp-for="name"></label>
+        <input asp-for="name" value=@Model.name>
+        <label asp-for="chef"></label>
+        <input asp-for="chef" value=@Model.chef>
+        <label asp-for="calories"></label>
+        <input asp-for="calories" value=@Model.calories>
+        <select asp-for="tastiness" value=@Model.tastiness>
+            <option default selected>how many stars out of five?</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <label asp-for="description"></label>
+        <input asp-for="description" value=@Model.description>
+        <button type="submit">Edit Dish</button>
+    </form>
+</div>
